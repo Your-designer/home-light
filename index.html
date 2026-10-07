@@ -59,33 +59,50 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "HOME LIGHT",
-        "description": "Праздничное и архитектурное световое оформление частных домов в Екатеринбурге и Свердловской области.",
-        "url": "https://homelight.pro/",
-        "image": "https://homelight.pro/img/og-image.jpg",
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Екатеринбург"
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "LocalBusiness",
+            "@id": "https://homelight.pro/#organization",
+            "name": "HOME LIGHT",
+            "description": "Праздничное и архитектурное световое оформление частных домов в Екатеринбурге и Свердловской области.",
+            "url": "https://homelight.pro/",
+            "telephone": "+7 993 510-85-95",
+            "image": "https://homelight.pro/img/og-image.jpg",
+            "logo": "https://homelight.pro/img/apple-touch-icon.png",
+            "areaServed": [
+                {
+                    "@type": "City",
+                    "name": "Екатеринбург"
+                },
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "Свердловская область"
+                }
+            ],
+            "serviceType": [
+                "Световое оформление домов",
+                "Праздничное освещение",
+                "Архитектурная подсветка",
+                "Гибкий неон",
+                "Монтаж гирлянд",
+                "Световые конструкции"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://homelight.pro/#website",
+            "url": "https://homelight.pro/",
+            "name": "HOME LIGHT",
+            "publisher": {
+                "@id": "https://homelight.pro/#organization"
             },
-            {
-                "@type": "AdministrativeArea",
-                "name": "Свердловская область"
-            }
-        ],
-        "serviceType": [
-            "Световое оформление домов",
-            "Праздничное освещение",
-            "Архитектурная подсветка",
-            "Гибкий неон",
-            "Монтаж гирлянд",
-            "Световые конструкции"
-        ]
-    }
-    </script>
+            "inLanguage": "ru-RU"
+        }
+    ]
+}
+</script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
