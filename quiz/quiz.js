@@ -412,6 +412,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     ${escapeHTML(
                                         lead.marketingConsent ||
                                         "Я согласен(а) на получение информационной и рекламной рассылки"
+                                    ).replace(
+                                        "информационной и рекламной рассылки",
+                                        '<a href="advertising.html" target="_blank" rel="noopener"><u>информационной и рекламной рассылки</u></a>'
                                     )}
                                 </span>
 
