@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     required
                                 >
 
-                                <span> Я даю согласие на обработку <a href="privacy.html" target="_blank" rel="noopener" > <u>персональных данных</u> </a> </span>
+                                <span> Я даю согласие на обработку <a href="privacy.html" rel="noopener" > <u>персональных данных</u> </a> </span>
 
                             </label>
 
@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                         "Я согласен(а) на получение информационной и рекламной рассылки"
                                     ).replace(
                                         "информационной и рекламной рассылки",
-                                        '<a href="advertising.html" target="_blank" rel="noopener"><u>информационной и рекламной рассылки</u></a>'
+                                        '<a href="advertising.html" rel="noopener"><u>информационной и рекламной рассылки</u></a>'
                                     )}
                                 </span>
 
