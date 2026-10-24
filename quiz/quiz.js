@@ -831,6 +831,11 @@ function animateStepChange() {
 
     function showSuccess() {
 
+        // Яндекс Метрика: успешное завершение квиза
+        if (typeof window.ym === 'function') {
+            window.ym(113551208, 'reachGoal', 'quiz_success');
+        }
+
         const content =
             document.querySelector("#quizContent");
 

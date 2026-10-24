@@ -418,6 +418,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         modal.classList.add("active");
 
+    // Яндекс Метрика: открытие формы обратного звонка
+        if (typeof window.ym === 'function') {
+        window.ym(113551208, 'reachGoal', 'callback_open');
+        }
+
         document.body.classList.add("callback-modal-open");
 
         document.body.style.overflow = "hidden";
@@ -738,11 +743,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                     if (success) {
-                        success.classList.add(
-                            "active"
-                        );
-                    }
 
+                        success.classList.add("active");
+
+                        // Яндекс Метрика: показ сообщения об успехе
+                        if (typeof window.ym === 'function') {
+                            window.ym(113551208, 'reachGoal', 'callback_success');
+                        }
+
+                    }
 
                 } catch (submitError) {
 
@@ -2987,4 +2996,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+});
+
+
+// ============================================================
+// YANDEX METRIKA — CLICK ON PHONE
+// ============================================================
+
+document.addEventListener('click', function (event) {
+    const phoneLink = event.target.closest('a[href^="tel:"]');
+
+    if (!phoneLink) return;
+
+    if (typeof window.ym === 'function') {
+        window.ym(113551208, 'reachGoal', 'phone_click');
+    }
 });
